@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+class a
+{
+	public:
+	void show()
+	{
+		cout<<"hello"<<endl;
+	}
+	private:
+		void f()
+		{
+			cout<<"hello";
+		}
+		public:
+			void ff()
+			{
+				void f();
+			}
+};
+class b:public a
+{
+	public:
+	void h(){
+		
+	cout<<"hello";
+}
+};
+int main()
+{
+	b ob;//creating an obj
+	ob.show();
+	ob.ff();
+	ob.h();
+	return 0;
+}
